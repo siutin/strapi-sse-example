@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  mongodb:
+    image: 'bitnami/mongodb:latest'
+    ports:
+      - "27017:27017"
+    volumes:
+      - ${DB_PATH}:/bitnami
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
